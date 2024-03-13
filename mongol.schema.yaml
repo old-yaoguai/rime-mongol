@@ -4,20 +4,19 @@
 schema:
   schema_id: mongol
   name: "蒙古文"
-  version: "poly2013.10.27"
+  version: "2016.10.07"
   author:
     - polyhedron<biopolyhedron@gmail.com>
   description: |
     蒙古文轉寫輸入。
     ᠬ - k, ᠾ - h, ᠺ - kk, ᠻ - kh。
-    ᠵ - j, ᠴ - q, ᠱ - x, ᠽ - z, ᠼ - c, ᡁ - zh, ᡂ - ch, ᠿ - r。
-    ngg ᠩᠭ‍和ngk ᠩᠬ‍可簡寫爲ng和nk。
+    ᠵ - j, ᠴ - q, ᠱ - x, ᠽ - z, ᠼ - c, ᡁ - zh, ᡂ - ch, ᠿ - rh。
     4, 5, 6, 7号元音o, u, ö, ü分別用o, u, w, v輸入，ᠧ用ee。
-    不可見符号，三個變形符分別用FVS1 - ', FVS2 - ", FVS3 - `。
+    不可見符号，三個變形符分別用'來選FVS1, FVS2, FVS3。
     元音分隔符MVS - _, 窄不間斷空格NNBSP - -。
     零長度間斷符ZWNJ - ^, 零長度連接符ZWJ - *。
     1-nige, 2-koyar, 3-gurba, 4-dwrbe, 5-tabu,
-    6-jirgug_a, 7-dolug_a, 8-naima, 9-yisv, 10-arba
+    6-jirgug_a, 7-dolog_a, 8-nai'ma, 9-yisv, 10-arba
 
 switches:
   - name: ascii_mode
@@ -71,11 +70,10 @@ punctuator:
     "." : "᠃"
     ":" : "᠄"
     "#" : "᠅"
-#    "–'" : "᠆"
+#    "–'" : "᠊"
 #    "–"" : "᠇"
 #    ",'" : "᠈"
 #    ".'" : "᠉"
-    "‐" : "᠊"
     "0" : "᠐"
     "1" : "᠑"
     "2" : "᠒"	
@@ -93,7 +91,8 @@ punctuator:
 #    "_" : "᠎"
     "^" : "‌"
     "*" : "‍"
-    "-" : " "
+#    "-" : " "
+    "-" : [' ', '᠊']
 
 #  full_shape: *punct
 #    ' ' : { commit: ' ' }
